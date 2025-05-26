@@ -1,0 +1,10 @@
+services:
+    dev:
+        image: mcr.microsoft.com/devcontainers/base:bookworm
+        restart: always
+        command: /bin/sh -c "while sleep 1000; do :; done"
+        volumes:
+            - ..:/workspace
+    squid:
+        restart: always
+        image: ubuntu/squid
